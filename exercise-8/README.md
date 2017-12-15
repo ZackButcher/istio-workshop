@@ -48,7 +48,7 @@ Note that rules with a higher precedence number are applied first.  If a precede
 Test this out by creating the rule:
 
 ```
-    istioctl create -f guestbook/canary-helloworld.yaml
+    istioctl create -f guestbook/route-rule-canary.yaml
 ```
 
 Now when you curl the end point set the user agent to be mobile and you should only see V2:
@@ -88,7 +88,7 @@ It is also possible to route it based on the Web Browser.  For example the follo
 To apply this route run:
 
 ```
-    istioctl create -f route-ui-user-agent-chrome.yaml
+    istioctl create -f guestbook/route-rule-user-agent-chrome.yaml
 ```
 
 Then navigate to the home page in chrome and another browser.
